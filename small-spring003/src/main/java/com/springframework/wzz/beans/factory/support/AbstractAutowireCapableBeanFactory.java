@@ -24,7 +24,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
     protected Object createBeanInstance(BeanDefinition beanDefinition, String beanName, Object[] args) {
         Constructor constructorToUse = null;
-        Class<?> beanClass = beanDefinition.getClass();
+        Class<?> beanClass = beanDefinition.getBean();
         Constructor<?>[] declaredConstructors = beanClass.getDeclaredConstructors();
 
         //将所有的构造器参数对比

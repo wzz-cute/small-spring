@@ -24,13 +24,13 @@ public class Test {
         beanFactory.registerBeanDefinition("userService", beanDefinition);
 
         //第一次获取bean
-        UserService userService = (UserService) beanFactory.getBean("userService");
-        System.out.println(userService);
-        userService.queryUserInfo();
+//        UserService userService = (UserService) beanFactory.getBean("userService");
+//        System.out.println(userService);
+//        userService.queryUserInfo();
 
         //第二次获取bean 单例
-//        UserService userService_singleton = (UserService) beanFactory.getBean("userService","wzz");
-//        System.out.println(userService_singleton);
-//        userService_singleton.queryUserInfo();
+        UserService userService_singleton = (UserService) beanFactory.getBean("userService","wzz");
+        System.out.println(userService_singleton);
+        userService_singleton.queryUserInfo();
     }
 }
